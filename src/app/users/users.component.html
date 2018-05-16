@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="container-fluid">
+<h2>User's List</h2>
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let user of users'>
+      <!-- <th>{{user.id}}</th> -->
+      <th>{{user.name}}</th>
+      <th>{{user.username}}</th>
+      <th>{{user.phone}}</th>
+       <th>{{user.website}}</th>
+       <th><a routerLink="/albums/{{user.id}}">Albums</a></th>
+    </tr>
+  </tbody>
+</table>
+</div>

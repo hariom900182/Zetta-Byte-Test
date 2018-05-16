@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container-fluid">
+<h2>Photo's List  <a routerLink="/albums/{{userId}}"  class="btn btn-primary">go back</a></h2>
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Title</th>
+      <!-- <th>album</th> -->
+      
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor='let photo of photos  | slice:0:5'>
+      <!-- <th>{{user.id}}</th> -->
+      <th><img src="{{photo.thumbnailUrl}}" class="img-responsive" /></th>
+      <th style="line-height:150px;">{{photo.title}}</th>
+      <!-- <th>{{photo.albumId}}</th> -->
+      
+    </tr>
+  
+  </tbody>
+</table>
+</div>
